@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+ \usepackage{fullpage} % Package to use full page
+ \usepackage{parskip} % Package to tweak paragraph skipping
+ \usepackage{tikz} % Package for drawing
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+ \usepackage{hyperref}
+ \usepackage[utf8]{inputenc}
+ \usepackage[english]{babel}
+ \usepackage{multicol}
+ \usepackage{mathtools}
+ \usepackage{listings}
+
+ 
+ \newcommand\tab[1][0.5cm]{\hspace*{#1}}
+ \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+ \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+ \DeclareUnicodeCharacter{2212}{-}
+ 
+ \title{Worksheet 1}
+ \author{Adrian Darian}
+ \date{2019/1/28}
+ 
+ \begin{document}
+ 
+ \maketitle
+
+ \section*{12.1 - 3}
+ \begin{itemize}
+ \item[1] Which two of the three points $P1(1,2,3)$, $P2(3,2,1)$ and $P3(1,1,0)$ are closest to each other?
+ \tab $P1P2:$ \\
+ \tab $d = \sqrt{(3 - 1)^{2} + (2 - 2)^{2} + (1 - 3)^{2}}$ \\
+ \tab $d = \sqrt{4 + 4} = \sqrt{8}$ \\
+ \tab $P2P3:$ \\
+ \tab $d = \sqrt{(1 - 3)^{2} + (1 - 2)^{2} + (0 - 1)^{2}}$ \\
+ \tab $d = \sqrt{4 + 1 + 1} = \sqrt{6}$ \\
+ \tab $P1P3:$ \\
+ \tab $d = \sqrt{(1 - 1)^{2} + (1 - 2)^{2} + (0 - 3)^{2}}$ \\
+ \tab $d = \sqrt{1 + 9} = \sqrt{10}$ \\
+ \tab $\therefore P2P3$ has the shortest distance.
+ \item[2] Describe the set of points \\
+  a. whose distance from the x axis is $2$. \\
+  \tab $-2 \geq y \geq 2$ \\ 
+  b. located a distance $3$ from the point $(0,1,1)$ and find what equation they satisfy. \\
+  \tab $3 = \sqrt{(x - 0)^{2} + (y - 1)^{2} + (z - 1)^{2}}$ \\
+  \tab $9 = x^{2} + (y - 1)^{2} + (z - 1)^{2}$ 
+ \item[3] Find a formula for the shortest distance between a point $(a, b, c)$ and the y axis.
+ \item[4] Describe the set of all points equidistant from the points $A(−1,5,3)$ and $B(6,2,−2)$. (Challenge: find an equation for this set)
+ \item[5] A car goes clockwise on an elliptic track $\frac{x^2}{4} + y^{2} = 1$, decelerating at the curves and accelerating along the straighter portions. Sketch the track and possible velocity vectors at $(−2,0)$, $(0,1)$ and $(\sqrt{3}, \frac{1}{2})$.
+ \item[6] Perform the indicated operations with: $\overrightarrow{a}=\overrightarrow{j} + 3\overrightarrow{k}$, $\overrightarrow{b} = 4\overrightarrow{i} − 5\overrightarrow{j} + \overrightarrow{k}$, $\overrightarrow{c} = 3\overrightarrow{i} + 5\overrightarrow{j}$ \\
+ i. $5\overrightarrow{b}$ \\
+ ii. $\overrightarrow{a} + \overrightarrow{c}$ \\
+ iii. $2\overrightarrow{c} + \overrightarrow{b}$ \\
+ iv. $||\overrightarrow{b}||$ \\
+ v. $\frac{\overrightarrow{b}}{||\overrightarrow{b}||}$ \\
+ vi. $2\overrightarrow{a} + 7\overrightarrow{b} − 5\overrightarrow{c}$
+ \item[7] Find the components of the vector $\overrightarrow{v}$ in the xy plane if $||\overrightarrow{v}|| = 10$ and $\overrightarrow{v}$ is at an angle of $35^{\circ}$ below the positive x-axis.
+ \item[8] Find a unit vector from $P = (−1,3)$ and toward $Q = (2,5)$. Find a vector of length $12$ pointing in the same direction.
+ \item[9] An airplane is heading due east and climbing at the rate of $85$ km/hr. If its air speed indicator reads $490$ km/hr. After some time, there is a (horizontal) wind blowing $90$ km/hr toward the northeast, which the plane does not adjust for. what is the horizontal rate of speed of the plane in the wind as detected by a stationary radar unit on the ground? (Hint: Write everything down as vectors, finding their components.)
+ \item[10] A $100$-meter dash is run in the direction of the vector $\overrightarrow{v} = 2\overrightarrow{i} + 6\overrightarrow{j}$. The wind velocity $\overrightarrow{w}$ is $5\overrightarrow{i} + \overrightarrow{j}$ km/hr. A legal wind speed measured in the direction of the dash may not exceed $5$ km/hr. Will the race results be disqualified due to excessive wind?
+ \item[11] The Parallelogram Law states that: $|\overrightarrow{a} + \overrightarrow{b}|^{2} + |\overrightarrow{a} − \overrightarrow{b}|^{2} = 2|\overrightarrow{a}|^{2} + 2|\overrightarrow{b}|^{2}$ \\
+ a. Give a geometric interpretation of the Parallelogram Law. \\
+ b. Prove the this Law using the properties of the dot product. (Don’t introduce coordinates.)
+ \item[12] Complete the following \\
+ a. Draw the vectors $\overrightarrow{a} = <3, 2>$, $\overrightarrow{b} = <2, −1>$, and $\overrightarrow{c} = <7, 1>$. \\
+ b. Show, by means of a sketch, that there are scalars $s$ and $t$ such that $\overrightarrow{c} = s\overrightarrow{a} + t\overrightarrow{b}$. \\
+ c. Use the sketch to estimate the values of $\overrightarrow{s} and \overrightarrow{t}$. \\
+ d. Compute the exact values of $s$ and $t$.
+ \item[13] For any given vectors $\overrightarrow{a}$ and $\overrightarrow{b}$, consider the following function of $t: q(t) = (\overrightarrow{a} + t\overrightarrow{b}) x (\overrightarrow{a} + t\overrightarrow{b})$. \\
+ i. Explain why $q(t) \geq 0$ for any real $t$. \\
+ ii. Expand $q(t)$ as a quadratic polynomial in $t$ using the properties of the dot product. (Do not introduce coordinates.) 
+ iii. Using the discriminant of the quadratic, show that $|\overrightarrow{a} x \overrightarrow{b}| \leq |\overrightarrow{a}||\overrightarrow{b}|$. This result is called the Cauchy–Schwarz Inequality.
+ \end{itemize}
+
+ 
+
+ 
+ \end{document}
